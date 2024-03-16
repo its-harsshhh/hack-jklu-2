@@ -40,12 +40,14 @@ To get started with Swift Startup, follow these steps:
    ```bash
    git clone https://github.com/your_username/swift-startup.git
 
-Install dependencies: 
-cd swift-startup
-npm install
+2. Install dependencies: 
+   ```bash
+    cd swift-startup
+    npm install
 
-Run the application:
-npm start
+3. Run the application:
+   ```bash
+    npm start
 
 Access the application at http://localhost:3000 in your web browser.
 
