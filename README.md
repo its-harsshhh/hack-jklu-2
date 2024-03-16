@@ -52,19 +52,12 @@ To get started with Swift Startup, follow these steps:
 Access the application at http://localhost:3000 in your web browser.
 
 
-##Contributing
-Contributions are welcome! Please refer to the Contribution Guidelines for more details.
+## Contributing
+We welcome contributions from the community to enhance Swift Startup. Fork our repository, make your changes, and submit a pull request.
 
-##License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## License
+Swift Startup is licensed under the [MIT License](LICENSE).
 
-
-In this README.md file:
-
-- Replace `link_to_presentation` and `link_to_video` with the actual links to your presentation (PPT) and video demonstration on platforms like Google Drive, YouTube, or any other hosting service.
-- Customize the "Challenges Faced" section to include specific challenges your team encountered while developing Swift Startup for the Hack JKLU Hackathon.
-
-Make sure to include the actual presentation (PPT) and video demonstration links in your repository and update the README.md file accordingly before submitting your project for the hackathon. Adjust the content as needed to accurately reflect the details and progress of your project.
-
+For more information and updates, visit our [website](https://swiftstartup.com).
 
 
