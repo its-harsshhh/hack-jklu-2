@@ -18,6 +18,7 @@ import {
   LucideIcon,
   LucideProps,
   Moon,
+  Activity,
   MoreVertical,
   Pizza,
   Plus,
@@ -58,6 +59,7 @@ export const Icons = {
   help: HelpCircle,
   pizza: Pizza,
   sun: SunMedium,
+  activity: Activity,
   moon: Moon,
   laptop: Laptop,
   gitHub: ({ ...props }: LucideProps) => (

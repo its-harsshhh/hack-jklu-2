@@ -143,9 +143,12 @@ export const navItems: NavItem[] = [
     label: "kanban",
   },
   {
-    title: "Login",
-    href: "/",
-    icon: "login",
-    label: "login",
+    title: "Website Stats",
+    href: "/dashboard/websiteStats",
+    icon: "activity",
+    label: "websiteStats",
   },
 ];
+
+
+export const DemoWebsiteStats = {}
