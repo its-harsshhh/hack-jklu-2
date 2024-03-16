@@ -1,3 +1,4 @@
+"use client";
 import { CalendarDateRangePicker } from "@/components/date-range-picker";
 import { Overview } from "@/components/overview";
 import { RecentSales } from "@/components/recent-sales";
@@ -9,16 +10,37 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { collection, addDoc } from "firebase/firestore";
+
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useRouter } from "next/navigation";
+import { SetStateAction, useEffect, useState } from "react";
+import { auth, db, database } from "../firebase/firebase-config";
+import axios from "axios";
+import { useUser } from "@/context/userContext";
 
-export default function page() {
+export default function Page() {
+  const { userData } = useUser();
+  console.log( {userData} );
+  const [user, loading, error] = useAuthState(auth);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!loading && !user) {
+      router.push("/");
+    }
+  }, [loading, user, router]);
+
+  console.log({ user });
+
   return (
     <ScrollArea className="h-full">
       <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
         <div className="flex items-center justify-between space-y-2">
           <h2 className="text-3xl font-bold tracking-tight">
-            Hi, Welcome back 👋
+            Hi {userData.name}, Welcome back 👋
           </h2>
           <div className="hidden md:flex items-center space-x-2">
             <CalendarDateRangePicker />
@@ -53,7 +75,7 @@ export default function page() {
                   </svg>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">$45,231.89</div>
+                  <div className="text-2xl font-bold">${userData.revenue}</div>
                   <p className="text-xs text-muted-foreground">
                     +20.1% from last month
                   </p>
